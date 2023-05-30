@@ -1,0 +1,186 @@
+body, h1, h2,h3,h4,p,a {
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+*{box-sizing: border-box;
+}
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+
+.header {
+  height: 100vh;
+  background-color: #eee;
+  background-image: url(img/фонэ.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+ 
+}
+
+.header-title {
+  font-size: 100px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin:auto;
+}
+  .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  display:flex;
+}
+.content{ font-size: 0;
+  width:790px;
+  margin: 100px auto 50px;
+  display: flex; 
+  flex-wrap: wrap;
+}
+.card{
+  width:350px;
+  margin-bottom:60px;
+  margin-right:90px;
+  padding:45px 45px 70px 45px;
+  box-shadow:4px 4px 5px  rgba(196, 187, 197, 0.4);
+ /* border:  solid 2px rgba(250, 50, 50, .4);*/
+ display: inline-block}
+.no-right-margin{margin-right:0;
+}
+.card-title {
+  font-size:24px;
+  font-weight: 500;
+  margin-bottom:10px;
+}
+.card-text{
+   font-size:16px;
+  margin-bottom:25px;
+}
+.card-image{width: 100%;
+/* margin-bottom:25px; */
+height:100%;
+}
+.footer{ height:200px; 
+  background-color:	#ffef7ae2;
+  display: flex;
+}
+.footer-author{color:#fec35efb;
+font-size: 36px;
+margin: auto
+}
+.photo-container-2 {
+  max-width: 380px;
+  width: 100%;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+}
+.photo-container-2 img {
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+}
+.photo-container-2 .photo-1 {
+  position: relative;
+  animation: rotate 10s linear 5s infinite;
+}
+.photo-container-2 .photo-2 {
+  position: absolute;
+  top: 0;
+  animation: rotate 10s linear infinite;
+}
+@keyframes rotate {
+  0% {
+      opacity: 1;
+      transform: rotate(0) scale(1);
+  }
+  50% {
+      transform: rotate(0) scale(1);
+      opacity: 1;
+  } 
+  59.99999% {
+      transform: rotate(45deg) scale(3);
+      opacity: 0;
+      z-index: 1;
+  }   
+  60% {
+      opacity: 0;
+      z-index: -1;
+  }  
+  100% {
+      opacity: 1;
+  }  
+}
+.callback {
+width: 300px;
+height: 150px;
+background-color: #49a4f4;
+position: absolute;
+bottom: 30px;
+}
+#callback p{
+color: #fff;
+padding: 22px;
+} 
+.link {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2rem;
+  background-color: #fec35efb;
+  border-radius: 5px;
+  color: #fff;
+  padding: 15px 25px;
+  transition: all 0.8s ease 0s;
+  justify-content: center;
+  display: block;
+  text-align: center;
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-bottom: 50px;
+  }
+  
+  .link:hover {
+  background-color: #ffef7ae2;
+  color:#49a4f4;
+  }
+.kkk{
+  border-top-width: 5px;
+  margin-bottom: 0%;
+  border-style: dashed;
+}
+#callback {
+    width: 300px;
+    height: 150px;
+    background-color: #ffef7ae2;
+    /* position: absolute; */
+    position: fixed;
+    bottom: 30px;
+    transform: translateX(-100%);
+    /* position: fixed; */
+    top: 100px;
+    left: 0%;
+    z-index: 999;
+}
+ #callback p {
+  color: blue;
+  padding: 22px;
+ 
+ }
+#callback:after {
+  content: 'Обратная связь';
+  background-color: #fec35efb;
+  text-align: center;
+  border-radius: 0 0 8px 8px;
+  padding: 5px 0;
+  width: 150px; /* ширина псевдоэлемента равна высоте блока */
+  position: absolute; /* позиционирование абсолютное */
+  left: 300px; /* позиция слева равен ширине блока #callback */
+  transform: rotate(-90deg) translate(-70px, 0px);
+  transform-origin: 0 0;
+ }
+ #callback:hover {
+  transform: translateX(0%);
+  transition: all 0.7s ease;
+ }
